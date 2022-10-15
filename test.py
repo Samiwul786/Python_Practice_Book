@@ -122,4 +122,4 @@ uniqueNums([1,2,2,3,4,5,4,6,7])
 print("The duplicate nums are")
 duplicateNums([1,2,2,3,4,5,4,6,7])
 
-        
+print("The lowest number is", checkLowerNumber(5, 2))
