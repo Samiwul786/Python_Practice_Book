@@ -5,14 +5,13 @@ Created on Thu May 26 18:08:44 2022
 """
 import os
 import sys
-import paramiko as pa
 
 
 
 
 
-def make_file():
-    print(pa.Agent)
+
+
     
     
 def countries_greeting(country:str):
@@ -89,10 +88,14 @@ def checkStatement():
             break
         count += 1
         
-
-
-print("The greater number is ", checkGreaterNumber(2, 3))
-print("The greater number is ", checkGreaterNumber(5, 3))        
-checkStatement()
+def uniqueNums(theList):
+    
+    new_nums = set(theList)
+    new_nums_list = list(new_nums)
+    
+    print(new_nums_list)
+ 
+print("The unique numbers are")    
+uniqueNums([1,2,2,3,4,5,4,6,7])
 
         

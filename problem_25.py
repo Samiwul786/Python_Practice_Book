@@ -12,5 +12,8 @@ def reverse(values:list):
             
     return reversed_list    
 
+def hello():
+    print("Hello world")
+
 print(reverse([1,2,3,4]))        
         
