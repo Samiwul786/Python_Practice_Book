@@ -94,8 +94,27 @@ def uniqueNums(theList):
     new_nums_list = list(new_nums)
     
     print(new_nums_list)
+
+def duplicateNums(theList):
+    
+    seen = set()
+    
+    dup = []
+ 
+    for i in theList:
+        
+        if (i in seen):
+            dup.append(i)
+        else:
+            seen.add(i)   
+            
+    print(dup)
+           
  
 print("The unique numbers are")    
 uniqueNums([1,2,2,3,4,5,4,6,7])
+
+print("The duplicate nums are")
+duplicateNums([1,2,2,3,4,5,4,6,7])
 
         
