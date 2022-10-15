@@ -75,7 +75,12 @@ def checkGreaterNumber(number1:int , number2:int):
     else:
         return number2
 
-
+def checkLowerNumber(num1:int, num2:int):
+    
+    if (num1 < num2):
+        return num1
+    else:
+        return num2
 
 def checkStatement():
     
