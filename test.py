@@ -3,6 +3,7 @@
 Created on Thu May 26 18:08:44 2022
 @author: smuss
 """
+from curses.ascii import isdigit
 import os
 import sys
 
@@ -115,7 +116,50 @@ def duplicateNums(theList):
             
     print(dup)
            
- 
+def sum_textwithnumbers(text:str) -> str:
+    
+    text_with_numbers = text.split()
+    
+    
+    myList = []
+    sum = 0
+    
+    for i in text_with_numbers:
+        
+      
+        if i.isdigit():
+            myList.append(i)
+            print(myList)
+            
+    for x in range(len(myList)):
+        
+       sum = sum + int(myList[x])
+        
+        
+    return sum
+                
+def is_acceptable_password(password:str): 
+    
+    if len(password) < 4:
+        return False
+    elif len(password) < 6:
+        return False
+    elif len(password) > 6 and containsNums(password):
+        return True
+    else:
+        return False
+    
+    
+       
+def containsNums(password:str):
+    
+    for i in password:
+        
+        if i.isdigit():
+            return True
+        
+    return False        
+    
 print("The unique numbers are")    
 uniqueNums([1,2,2,3,4,5,4,6,7])
 
@@ -123,3 +167,10 @@ print("The duplicate nums are")
 duplicateNums([1,2,2,3,4,5,4,6,7])
 
 print("The lowest number is", checkLowerNumber(5, 2))
+
+text = "I have been born since 2000 and lived till 2022"
+print("The below code is the numbers added within a text", sum_textwithnumbers(text))
+
+
+passwrd = "samiwul786"
+print(is_acceptable_password(passwrd))
