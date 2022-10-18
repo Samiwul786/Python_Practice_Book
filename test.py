@@ -3,7 +3,7 @@
 Created on Thu May 26 18:08:44 2022
 @author: smuss
 """
-from curses.ascii import isdigit
+from curses.ascii import isalpha, isdigit
 import os
 import sys
 
@@ -140,6 +140,8 @@ def sum_textwithnumbers(text:str) -> str:
                 
 def is_acceptable_password(password:str): 
     
+    
+    
     if len(password) < 4:
         return False
     elif len(password) < 6:
@@ -159,6 +161,15 @@ def containsNums(password:str):
             return True
         
     return False        
+
+def containsNoDigits(password:str):
+    
+    for char in password:
+        
+        if char.isalpha():
+            return True
+        
+    return False     
     
 print("The unique numbers are")    
 uniqueNums([1,2,2,3,4,5,4,6,7])
